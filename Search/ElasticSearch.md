@@ -174,3 +174,8 @@ es集群有多个节点，会自动选举一个节点为master，负责管理类
   - R0和R1重新分配，集群变绿
 - 某个分片不可用
   - 如果primary shard不可用，且该shard有副本，则master将副本分片提升为主分片，同时将自己复制出来一个新的副本，同步数据。
+
+### ElasticSearch 与 solr的区别
+
+- solr的分布式管理需要依赖zookeeper，ElasticSearch自带分布式协调管理功能
+- solr支持更多格式的数据，ElasticSearch仅支持json文件格式
